@@ -1,6 +1,6 @@
 {
   "name": "dark-heresy",
-  "title": "Dark Heresy 2E",
+  "title": "Dark Heresy 2E - Forked",
   "description": "Innocence proves nothing",
   "version": "4.0.0",
   "minimumCoreVersion" : 10,
@@ -10,7 +10,7 @@
     "maximum" : 10    
   },
   "templateVersion": 2,
-  "author": "JeansenVaars, Moo Man, fredthedeadhead, Perfectro, Vendare, Silver292",
+  "author": "JeansenVaars, Moo Man, fredthedeadhead, Perfectro, Vendare, Silver292, FalconPilot",
   "scripts": [],
   "esmodules": [
     "script/common/hooks.js"
