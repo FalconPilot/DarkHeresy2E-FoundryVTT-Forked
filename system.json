@@ -2,7 +2,7 @@
   "name": "dark-heresy-forked",
   "title": "Dark Heresy 2E - Forked",
   "description": "Innocence proves nothing",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "minimumCoreVersion" : 10,
   "compatibility" : {
     "minimum" : 10,
@@ -87,9 +87,9 @@
   "gridUnits": "m",
   "primaryTokenAttribute": null,
   "secondaryTokenAttribute": null,
-  "url": "https://github.com/moo-man/DarkHeresy2E-FoundryVTT",
+  "url": "https://github.com/FalconPilot/DarkHeresy2E-FoundryVTT-Forked",
   "socket": true,
-  "manifest": "https://raw.githubusercontent.com/moo-man/DarkHeresy2E-FoundryVTT/master/system.json",
-  "download": "https://github.com/moo-man/DarkHeresy2E-FoundryVTT/releases/download/4.0.0/dark-heresy.zip",
+  "manifest": "https://raw.githubusercontent.com/FalconPilot/DarkHeresy2E-FoundryVTT-Forked/master/system.json",
+  "download": "https://github.com/FalconPilot/DarkHeresy2E-FoundryVTT-Forked/releases/download/4.0.1/dark-heresy.zip",
   "license": "LICENSE.txt"
 }
