@@ -52,8 +52,8 @@
         <div class="item-list">
             <div class="flex header">
                 <b class="name">{{localize "WEAPON_MODIFICATION.HEADER"}}</b>
-                <b class="installed">{{localize "WEAPON_MODIFICATION.INSTALLED"}}</b>
                 <b class="upgrade">{{localize "WEAPON_MODIFICATION.UPGRADES"}}</b>
+                <b class="installed">{{localize "WEAPON_MODIFICATION.INSTALLED"}}</b>
                 <b class="weight">{{localize "WEAPON_MODIFICATION.WEIGHT"}}</b>
                 <a class="button item-create" title="Add Weapon Modification" data-type="weaponModification"><i class="fas fa-plus"></i></a>
             </div>
@@ -67,8 +67,14 @@
                                 </div>
                                 <div>{{item.name}}</div>
                             </div>
-                            <div class="installed">{{item.isInstalled}}</div>
                             <div class="upgrade">{{item.upgrades}}</div>
+                            <div class="installed">
+                                {{#if item.installed}}
+                                    <a class="item-control item-uninstall" title="Install mod"><i class="fas fa-cog"></i></a>
+                                {{else}}
+                                    <a class="item-control item-install" title="Uninstall mod"><i class="fas fa-cog"></i></a>
+                                {{/if}}
+                            </div>
                             <div class="weight">{{item.weight}}</div>
                             <div class="button">
                                 <a class="item-control item-delete" title="Delete Weapon Modification"><i class="fas fa-trash"></i></a>
@@ -253,8 +259,8 @@
         <div class="item-list">
             <div class="flex header">
                 <b class="name">{{localize "CYBERNETIC.HEADER"}}</b>
-                <b class="installed">{{localize "CYBERNETIC.INSTALLED"}}</b>
                 <b class="cybernetic-craftsmanship">{{localize "CYBERNETIC.CRAFTSMANSHIP"}}</b>
+                <b class="installed">{{localize "CYBERNETIC.INSTALLED"}}</b>
                 <b class="weight">{{localize "CYBERNETIC.WEIGHT"}}</b>
                 <a class="button item-create" title="Add Cybernetic" data-type="cybernetic"><i class="fas fa-plus"></i></a>
             </div>
@@ -268,8 +274,14 @@
                                 </div>
                                 <div>{{item.name}}</div>
                             </div>
-                            <div class="installed">{{item.isInstalled}}</div>
                             <div class="cybernetic-craftsmanship">{{item.Craftsmanship}}</div>
+                            <div class="installed">
+                                {{#if item.installed}}
+                                    <a class="item-control item-uninstall" title="Install mod"><i class="fas fa-cog"></i></a>
+                                {{else}}
+                                    <a class="item-control item-install" title="Uninstall mod"><i class="fas fa-cog"></i></a>
+                                {{/if}}
+                            </div>
                             <div class="weight">{{item.weight}}</div>
                             <div class="button">
                                 <a class="item-control item-delete" title="Delete Cybernetic"><i class="fas fa-trash"></i></a>

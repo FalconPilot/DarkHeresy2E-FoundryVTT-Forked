@@ -10,6 +10,8 @@ export class DarkHeresySheet extends ActorSheet {
     html.find(".item-delete").click(ev => this._onItemDelete(ev));
     html.find(".item-equip").click(ev => this._onItemEquip(ev));
     html.find(".item-unequip").click(ev => this._onItemUnequip(ev));
+    html.find(".item-install").click(ev => this._onItemInstall(ev));
+    html.find(".item-uninstall").click(ev => this._onItemUninstall(ev));
     html.find("input").focusin(ev => this._onFocusIn(ev));
     html.find(".roll-characteristic").click(async ev => await this._prepareRollCharacteristic(ev));
     html.find(".roll-skill").click(async ev => await this._prepareRollSkill(ev));
@@ -92,6 +94,20 @@ export class DarkHeresySheet extends ActorSheet {
     const div = $(event.currentTarget).parents(".item");
     let item = this.actor.items.get(div.data("itemId"));
     return item.update({ system: { equipped: false } });
+  }
+
+  _onItemInstall(event) {
+    event.preventDefault();
+    const div = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(div.data("itemId"));
+    return item.update({ system: { installed: true } });
+  }
+
+  _onItemUninstall(event) {
+    event.preventDefault();
+    const div = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(div.data("itemId"));
+    return item.update({ system: { installed: false } });
   }
 
   _onFocusIn(event) {

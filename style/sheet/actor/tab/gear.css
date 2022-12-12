@@ -150,6 +150,10 @@
     opacity: 0.3;
 }
 
+.dark-heresy .gear .all-gear .item-list .installed .item-install i {
+    opacity: 0.3;
+}
+
 .dark-heresy .gear .all-gear .item-list .button {
     flex-basis: 7%;
     text-align: center;
