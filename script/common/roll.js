@@ -357,7 +357,7 @@ async function _sendToChat(rollData) {
         rollData.render = await rollData.rollObject.render() 
         chatData.roll = rollData.rollObject;
     }
-    const html = await renderTemplate("systems/dark-heresy/template/chat/roll.html", rollData);
+    const html = await renderTemplate("systems/dark-heresy-forked/template/chat/roll.html", rollData);
     
     chatData.user = game.user.id,
     chatData.rollMode = game.settings.get("core", "rollMode"),
