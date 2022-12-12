@@ -249,6 +249,7 @@ export class DarkHeresyItem extends Item {
     get description() { return this.system.description}
     get availability() { return this.system.availability}
     get weight() { return this.system.weight}
+    get encumbranceMax() { return this.system.encumbranceMax}
     get quantity() { return this.system.quantity}
     get effect() { return this.system.effect}
     get weapon() { return this.system.weapon}

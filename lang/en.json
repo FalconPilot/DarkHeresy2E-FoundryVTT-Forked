@@ -230,6 +230,7 @@
   "GEAR.WEIGHT": "Weight",
   "GEAR.CRAFTSMANSHIP": "Craftsmanship",
   "GEAR.AVAILABILITY": "Availability",
+  "GEAR.MAX_ENCUMBRANCE": "Max Encumbrance",
 
   "HEADER.DESCRIPTION": "Description",
 

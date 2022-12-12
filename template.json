@@ -1001,7 +1001,8 @@
     },
     "gear": {
       "templates": [ "equipment" ],
-      "shortDescription": ""
+      "shortDescription": "",
+      "encumbranceMax": 0
     },
     "malignancy": {
       "templates": ["itemDescription"]

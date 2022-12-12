@@ -230,6 +230,7 @@
   "GEAR.WEIGHT": "Waga",
   "GEAR.CRAFTSMANSHIP": "Rzemiosło",
   "GEAR.AVAILABILITY": "Dostępność",
+  "GEAR.ENCUMBRANCE_MAX": "Max Encumbrance",
 
   "HEADER.DESCRIPTION": "Opis",
 

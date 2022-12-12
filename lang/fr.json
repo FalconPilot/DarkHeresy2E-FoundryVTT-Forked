@@ -199,6 +199,7 @@
     "GEAR.WEIGHT": "Poids",
     "GEAR.CRAFTSMANSHIP": "Qualité",
     "GEAR.AVAILABILITY": "Disponibilité",
+    "GEAR.ENCUMBRANCE_MAX": "Encombrement Maximum",
   
     "HEADER.DESCRIPTION": "Description",
   

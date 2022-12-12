@@ -262,6 +262,12 @@ export class DarkHeresyActor extends Actor {
                 this.encumbrance.max = 2250;
                 break
         }
+        for (let item of this.items) {
+            console.log(item);
+            if (typeof item.encumbranceMax === 'number') {
+                this.encumbrance.max += item.encumbranceMax;
+            }
+        }
     }
 
 
