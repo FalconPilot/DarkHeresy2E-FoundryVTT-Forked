@@ -8,7 +8,7 @@
                 <a class="button item-create" title="Add Talent" data-type="talent"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isTalent}}
                         <div class="talent item flex row" data-item-id="{{item.id}}">
                         <div class="flex name item-edit">
@@ -36,7 +36,7 @@
                 <a class="button item-create" title="Add Trait" data-type="trait"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isTrait}}
                         <div class="trait item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -64,7 +64,7 @@
                 <a class="button item-create" title="Add Special Abilities" data-type="specialAbility"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isSpecialAbility}}
                         <div class="special-ability item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">

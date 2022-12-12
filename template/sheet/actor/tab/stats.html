@@ -16,7 +16,7 @@
                 <a class="button item-create" title="Add Mental Disorder" data-type="mentalDisorder"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isMentalDisorder}}
                         <div class="insanity item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -68,7 +68,7 @@
                 <a class="button item-create" title="Add Malignancy" data-type="malignancy"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isMalignancy}}
                         <div class="corruption item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -91,7 +91,7 @@
                 <a class="button item-create" title="Add Mutation" data-type="mutation"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isMutation}}
                         <div class="corruption item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">

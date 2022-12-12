@@ -8,7 +8,7 @@
                 <a class="button item-create" title="Add Psychic Power" data-type="psychicPower"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isPsychicPower}}
                         <div class="psychic-power item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">

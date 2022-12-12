@@ -19,7 +19,7 @@
                 <a class="button item-create" title="Add Critical Injury" data-type="criticalInjury"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isCriticalInjury}}
                         <div class="wound item flex row" data-item-id="{{item.id}}">
                         <div class="flex wound-row item-edit">
@@ -144,7 +144,7 @@
                 <b class="special">{{localize "WEAPON.SPECIAL"}}</b>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isWeapon}}
                         <div class="weapon item flex row" data-item-id="{{item.id}}">
                             <div class="flex name">
@@ -203,7 +203,7 @@
                 <b class="special">{{localize "PSYCHIC_POWER.SPECIAL"}}</b>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isPsychicPower}}
                         <div class="weapon item flex row" data-item-id="{{item.id}}">
                             <div class="flex name">

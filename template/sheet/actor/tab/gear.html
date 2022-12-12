@@ -26,7 +26,7 @@
                 <a class="button item-create" title="Add Weapon" data-type="weapon"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isWeapon}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -58,7 +58,7 @@
                 <a class="button item-create" title="Add Weapon Modification" data-type="weaponModification"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isWeaponModification}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -87,7 +87,7 @@
                 <a class="button item-create" title="Add Ammunition" data-type="ammunition"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isAmmunition}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                         <div class="flex name item-edit">
@@ -116,7 +116,7 @@
                 <a class="button item-create" title="Add Armour" data-type="armour"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isArmour}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -150,7 +150,7 @@
                 <a class="button item-create" title="Add Force Field" data-type="forceField"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isForceField}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                         <div class="flex name item-edit">
@@ -177,7 +177,7 @@
                 <a class="button item-create" title="Add Gear" data-type="gear"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isGear}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -204,7 +204,7 @@
                 <a class="button item-create" title="Add Drug" data-type="drug"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isDrug}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -231,7 +231,7 @@
                 <a class="button item-create" title="Add Tool" data-type="tool"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isTool}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">
@@ -259,7 +259,7 @@
                 <a class="button item-create" title="Add Cybernetic" data-type="cybernetic"><i class="fas fa-plus"></i></a>
             </div>
             <div class="items">
-                {{#each actor.items as |item|}}
+                {{#each sortedItems as |item|}}
                     {{#if item.isCybernetic}}
                         <div class="gear item flex row" data-item-id="{{item.id}}">
                             <div class="flex name item-edit">

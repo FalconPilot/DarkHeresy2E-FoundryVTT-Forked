@@ -1,4 +1,6 @@
+import { DarkHeresyActor } from "../../common/actor.js";
 import {prepareCommonRoll, prepareCombatRoll, preparePsychicPowerRoll} from "../../common/dialog.js";
+import { DarkHeresyItem } from "../../common/item.js";
 
 export class DarkHeresySheet extends ActorSheet {
   activateListeners(html) {
@@ -21,8 +23,10 @@ export class DarkHeresySheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
+    const sortedItems = data.actor.items.contents.sort((i1, i2) => i1.name > i2.name ? 1 : -1);
     return {
       actor: data.actor,
+      sortedItems,
       system : data.data.system
     };
   }
@@ -60,7 +64,8 @@ export class DarkHeresySheet extends ActorSheet {
          type : header.type
     };
     this.actor.createEmbeddedDocuments("Item", [data], { renderSheet: true });
-}
+  }
+
   _onItemEdit(event) {
     event.preventDefault();
     const div = $(event.currentTarget).parents(".item");
