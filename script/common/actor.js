@@ -79,8 +79,10 @@ export class DarkHeresyActor extends Actor {
         let encumbrance = 0;
         for (let item of this.items) {
 
+            const multiplier = typeof item.quantity === 'number' ? item.quantity : 1;
+
             if (item.weight) {
-                encumbrance = encumbrance + item.weight;
+                encumbrance = encumbrance + item.weight * multiplier;
             }
         }
         this._computeEncumbrance(encumbrance);
