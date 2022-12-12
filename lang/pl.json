@@ -61,6 +61,7 @@
   "ARMOUR.TYPE": "Typ",
   "ARMOUR.CRAFTSMANSHIP": "Rzemiosło",
   "ARMOUR.AVAILABILITY": "Dostępność",
+  "ARMOUR.EQUIPPED": "Equipped",
 
   "ARMOUR_TYPE.BASIC": "Prosty",
   "ARMOUR_TYPE.FLAK": "Flak",

@@ -38,6 +38,7 @@
     "ARMOUR.TYPE": "Type",
     "ARMOUR.CRAFTSMANSHIP": "Qualité",
     "ARMOUR.AVAILABILITY": "Disponibilité",
+    "ARMOUR.EQUIPPED": "Equipé",
   
     "ARMOUR_TYPE.BASIC": "Primitive",
     "ARMOUR_TYPE.FLAK": "Pare-balle",

@@ -38,6 +38,7 @@
   "ARMOUR.TYPE": "Tipo",
   "ARMOUR.CRAFTSMANSHIP": "Calidad",
   "ARMOUR.AVAILABILITY": "Disponibilidad",
+  "ARMOUR.EQUIPPED": "Equipped",
 
   "ARMOUR_TYPE.BASIC": "Básico",
   "ARMOUR_TYPE.FLAK": "Antifragmentación",

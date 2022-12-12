@@ -111,6 +111,7 @@
             <div class="flex header">
                 <b class="name">{{localize "ARMOUR.HEADER"}}</b>
                 <b class="part">{{localize "ARMOUR.PART"}}</b>
+                <b class="equipped">{{localize "ARMOUR.EQUIPPED"}}</b>
                 <b class="weight">{{localize "ARMOUR.WEIGHT"}}</b>
                 <a class="button item-create" title="Add Armour" data-type="armour"><i class="fas fa-plus"></i></a>
             </div>
@@ -125,6 +126,13 @@
                                 <div>{{item.name}}</div>
                             </div>
                             <div class="part">{{item.Part}}</div>
+                            <div class="equipped">
+                                {{#if item.equipped}}
+                                    <a class="item-control item-unequip" title="Equip armour"><i class="fas fa-shield"></i></a>
+                                {{else}}
+                                    <a class="item-control item-equip" title="Unequip armour"><i class="fas fa-shield"></i></a>
+                                {{/if}}
+                            </div>
                             <div class="weight">{{item.weight}}</div>
                             <div class="button">
                                 <a class="item-control item-delete" title="Delete Armour"><i class="fas fa-trash"></i></a>

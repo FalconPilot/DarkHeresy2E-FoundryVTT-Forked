@@ -35,6 +35,14 @@
                             {{/select}}
                         </select>
                     </div>
+                    <div class="stat equipped">
+                        <label>{{localize "ARMOUR.EQUIPPED"}}</label>
+                        {{#if system.equipped}}
+                            <input name="system.equipped" type="checkbox" value="equipped" checked/>
+                        {{else}}
+                            <input name="system.equipped" type="checkbox" value="equipped"/>
+                        {{/if}}
+                    </div>
                     <div class="stat max-agility">
                         <label>{{localize "ARMOUR.MAX_AGILITY"}}</label>
                         <input name="system.maxAgility" type="number" value="{{system.maxAgility}}" data-dtype="Number" />

@@ -140,7 +140,7 @@ export class DarkHeresyActor extends Actor {
 
         // for each item, find the maximum armour val per location
         this.items
-            .filter(item => item.type === "armour")
+            .filter(item => item.type === "armour" && !!item.equipped)
             .reduce((acc, armour) => {
                 Object.keys(locations)
                     .forEach((location) => {
@@ -263,7 +263,6 @@ export class DarkHeresyActor extends Actor {
                 break
         }
         for (let item of this.items) {
-            console.log(item);
             if (typeof item.encumbranceMax === 'number') {
                 this.encumbrance.max += item.encumbranceMax;
             }

@@ -6,6 +6,8 @@ export class DarkHeresySheet extends ActorSheet {
     html.find(".item-create").click(ev => this._onItemCreate(ev));
     html.find(".item-edit").click(ev => this._onItemEdit(ev));
     html.find(".item-delete").click(ev => this._onItemDelete(ev));
+    html.find(".item-equip").click(ev => this._onItemEquip(ev));
+    html.find(".item-unequip").click(ev => this._onItemUnequip(ev));
     html.find("input").focusin(ev => this._onFocusIn(ev));
     html.find(".roll-characteristic").click(async ev => await this._prepareRollCharacteristic(ev));
     html.find(".roll-skill").click(async ev => await this._prepareRollSkill(ev));
@@ -71,6 +73,20 @@ export class DarkHeresySheet extends ActorSheet {
     const div = $(event.currentTarget).parents(".item");
     this.actor.deleteEmbeddedDocuments("Item", [div.data("itemId")]);
     div.slideUp(200, () => this.render(false));
+  }
+
+  _onItemEquip(event) {
+    event.preventDefault();
+    const div = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(div.data("itemId"));
+    return item.update({ system: { equipped: true } });
+  }
+
+  _onItemUnequip(event) {
+    event.preventDefault();
+    const div = $(event.currentTarget).parents(".item");
+    let item = this.actor.items.get(div.data("itemId"));
+    return item.update({ system: { equipped: false } });
   }
 
   _onFocusIn(event) {

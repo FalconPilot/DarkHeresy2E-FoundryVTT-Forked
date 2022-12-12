@@ -258,6 +258,7 @@ export class DarkHeresyItem extends Item {
     get part() { return this.system.part}
     get maxAgility() { return this.system.maxAgility}
     get installed() { return this.system.installed}
+    get equipped() { return this.system.equipped}
     get shortDescription() { return this.system.shortDescription}
     get protectionRating() { return this.system.protectionRating}
     get overloadChance() { return this.system.overloadChance}

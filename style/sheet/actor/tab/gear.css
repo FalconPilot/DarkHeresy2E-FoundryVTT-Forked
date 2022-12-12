@@ -141,6 +141,15 @@
     text-align: center;
 }
 
+.dark-heresy .gear .all-gear .item-list .equipped {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.dark-heresy .gear .all-gear .item-list .equipped .item-equip i {
+    opacity: 0.3;
+}
+
 .dark-heresy .gear .all-gear .item-list .button {
     flex-basis: 7%;
     text-align: center;

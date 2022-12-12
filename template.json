@@ -971,6 +971,7 @@
     "armour": {
       "templates": [ "equipment" ],
       "type": "basic",
+      "equipped": false,
       "part": {
         "head": 0,
         "leftArm": 0,

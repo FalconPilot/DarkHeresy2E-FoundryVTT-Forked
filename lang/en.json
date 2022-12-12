@@ -61,6 +61,7 @@
   "ARMOUR.TYPE": "Type",
   "ARMOUR.CRAFTSMANSHIP": "Craftsmanship",
   "ARMOUR.AVAILABILITY": "Availability",
+  "ARMOUR.EQUIPPED": "Equipped",
 
   "ARMOUR_TYPE.BASIC": "Basic",
   "ARMOUR_TYPE.FLAK": "Flak",
