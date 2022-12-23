@@ -26,12 +26,17 @@ export class DarkHeresyActor extends Actor {
         this._computeMovement();
     }
 
+    _isEquippedPowerArmor (item) {
+        return item.type === 'armour' && item.system.type === 'power' && item.system.equipped;
+    }
+
     _computeCharacteristics() {
         let middle = Object.values(this.characteristics).length / 2;
         let i = 0;
         for (let characteristic of Object.values(this.characteristics)) {
+            const powerArmorBonus = characteristic.short === 'S' && this.items.find(this._isEquippedPowerArmor) ? 1 : 0;
             characteristic.total = characteristic.base + characteristic.advance;
-            characteristic.bonus = Math.floor(characteristic.total / 10) + characteristic.unnatural;
+            characteristic.bonus = Math.floor(characteristic.total / 10) + characteristic.unnatural + powerArmorBonus;
             if(this.fatigue.value > characteristic.bonus) {
                 characteristic.total = Math.ceil(characteristic.total / 2);
                 characteristic.bonus = Math.floor(characteristic.total / 10) + characteristic.unnatural;
@@ -78,11 +83,12 @@ export class DarkHeresyActor extends Actor {
     _computeItems() {
         let encumbrance = 0;
         for (let item of this.items) {
+            if (!this._isEquippedPowerArmor(item)) {
+                const multiplier = typeof item.quantity === 'number' ? item.quantity : 1;
 
-            const multiplier = typeof item.quantity === 'number' ? item.quantity : 1;
-
-            if (item.weight) {
-                encumbrance = encumbrance + item.weight * multiplier;
+                if (item.weight) {
+                    encumbrance += item.weight * multiplier;
+                }
             }
         }
         this._computeEncumbrance(encumbrance.toFixed(1));
@@ -170,7 +176,8 @@ export class DarkHeresyActor extends Actor {
 
     _computeMovement() {
         let agility = this.characteristics.agility;
-        let size = this.size;
+        const powerArmorBonus = this.items.find(this._isEquippedPowerArmor) ? 1 : 0;
+        let size = this.size + powerArmorBonus;
         this.system.movement = {
             half: agility.bonus + size - 4,
             full: (agility.bonus + size - 4) * 2,
